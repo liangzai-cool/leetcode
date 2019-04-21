@@ -29,8 +29,11 @@ public class LongestPalindromicSubstring {
     public boolean isPalindromic(String substring) {
         int len = substring.length();
         int left = len / 2, right = left + (len % 2);
-        String leftString = new StringBuffer(substring.substring(0, left)).toString();
-        String rightStringReversed = new StringBuffer(substring.substring(right, len)).reverse().toString();
-        return leftString.equals(rightStringReversed);
+        for (int i = 0, j = len - 1; i <= left; i++, j--) {
+            if (substring.charAt(i) != substring.charAt(j)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
