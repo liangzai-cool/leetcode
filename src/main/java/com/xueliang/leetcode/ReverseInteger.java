@@ -1,3 +1,5 @@
+package com.xueliang.leetcode;
+
 /**
  * @author xueliang
  * @since 2019-04-22 12:47
